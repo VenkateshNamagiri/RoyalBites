@@ -1,0 +1,442 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #0d0d0d;
+  color: white;
+}
+
+/* NAVBAR */
+
+.navbar {
+  background: rgba(0, 0, 0, 0.9);
+  padding: 20px 8%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  font-size: 35px;
+  color: #ffb703;
+  font-weight: bold;
+}
+
+.nav-links {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links .active {
+  color: #ffb703;
+}
+
+.cart {
+  background: #ffb703;
+  color: black !important;
+  padding: 10px 18px;
+  border-radius: 10px;
+}
+
+/* COMMON */
+
+.page {
+  min-height: 100vh;
+  padding: 60px 8%;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 50px;
+  font-size: 50px;
+  color: #ffb703;
+}
+
+/* HERO */
+
+.hero {
+  height: 90vh;
+  background: url("https://images.unsplash.com/photo-1504674900247-0877df9cc836")
+    center/cover no-repeat;
+  border-radius: 25px;
+  overflow: hidden;
+}
+
+.overlay {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+  padding: 20px;
+}
+
+.overlay h1 {
+  font-size: 75px;
+}
+
+.overlay p {
+  margin-top: 20px;
+  max-width: 700px;
+  font-size: 20px;
+  line-height: 1.8;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 20px;
+  margin-top: 35px;
+}
+
+.hero-buttons button {
+  padding: 15px 35px;
+  border: none;
+  border-radius: 12px;
+  background: #ffb703;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.outline-btn {
+  background: transparent !important;
+  border: 2px solid #ffb703 !important;
+  color: #ffb703 !important;
+}
+
+/* GRID */
+
+.about-container,
+.menu-grid,
+.gallery-grid,
+.contact-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+}
+
+/* CARDS */
+
+.about-box,
+.menu-card,
+.gallery-card,
+.contact-info,
+.contact-form,
+.booking-form,
+.cart-page-item {
+  background: #1b1b1b;
+  border-radius: 22px;
+  overflow: hidden;
+}
+
+.about-box,
+.contact-info {
+  padding: 30px;
+}
+
+.about-box h2,
+.contact-info h2 {
+  color: #ffb703;
+  margin-bottom: 15px;
+}
+
+.about-box p,
+.about-box li,
+.contact-info p {
+  color: #ddd;
+  line-height: 1.8;
+}
+
+/* MENU */
+
+.menu-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.menu-content {
+  padding: 20px;
+}
+
+.menu-content h3 {
+  color: #ffb703;
+  margin-bottom: 10px;
+}
+
+.menu-content p {
+  margin-bottom: 15px;
+}
+
+.menu-content button,
+.checkout-btn,
+.remove-btn,
+.booking-form button,
+.contact-form button {
+  padding: 14px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.menu-content button,
+.checkout-btn,
+.booking-form button,
+.contact-form button {
+  background: #ffb703;
+  color: black;
+}
+
+.remove-btn {
+  background: crimson;
+  color: white;
+}
+
+/* GALLERY */
+
+.gallery-card img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+}
+
+/* FORMS */
+
+.booking-form,
+.contact-form {
+  max-width: 700px;
+  margin: auto;
+  padding: 35px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.booking-form input,
+.booking-form textarea,
+.contact-form input,
+.contact-form textarea {
+  padding: 15px;
+  border: none;
+  border-radius: 10px;
+  background: #2a2a2a;
+  color: white;
+}
+
+.booking-form textarea,
+.contact-form textarea {
+  height: 140px;
+  resize: none;
+}
+
+/* CART PAGE */
+
+.cart-page-container {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.cart-page-item {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  align-items: center;
+}
+
+.cart-page-item img {
+  width: 220px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+.cart-page-content {
+  flex: 1;
+}
+
+.cart-page-content h3 {
+  color: #ffb703;
+  margin-bottom: 15px;
+}
+
+.cart-page-content p {
+  margin-bottom: 20px;
+}
+
+.cart-bottom {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.cart-bottom h2 {
+  margin-bottom: 20px;
+  color: #ffb703;
+}
+
+.empty-cart {
+  text-align: center;
+  color: #ccc;
+}
+
+/* FOOTER */
+
+.footer {
+  background: black;
+  text-align: center;
+  padding: 25px;
+  color: #aaa;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .overlay h1 {
+    font-size: 42px;
+  }
+
+  .overlay p {
+    font-size: 16px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+  }
+
+  .title {
+    font-size: 36px;
+  }
+
+  .cart-page-item {
+    flex-direction: column;
+  }
+
+  .cart-page-item img {
+    width: 100%;
+    height: 240px;
+  }
+}
+/* ================= RESPONSIVE FIXES ================= */
+
+@media (max-width: 1024px) {
+  .overlay h1 {
+    font-size: 55px;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+  }
+
+  .overlay h1 {
+    font-size: 38px;
+  }
+
+  .overlay p {
+    font-size: 15px;
+    padding: 0 10px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+  }
+
+  .menu-grid,
+  .gallery-grid,
+  .about-container,
+  .contact-container {
+    grid-template-columns: 1fr;
+  }
+
+  .cart-sidebar {
+    width: 100%;
+  }
+
+  .cart-page-item {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .cart-page-item img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo {
+    font-size: 24px;
+  }
+
+  .title {
+    font-size: 28px;
+  }
+
+  .overlay h1 {
+    font-size: 30px;
+  }
+
+  .hero {
+    height: 70vh;
+  }
+
+  .booking-form,
+  .contact-form {
+    padding: 20px;
+  }
+
+  .nav-links a {
+    font-size: 14px;
+  }
+}
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
